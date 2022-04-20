@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(241, 241, 241);
+}
+
+.header {
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    padding: 20px 50px;
+    background-color: rgb(29, 216, 107);
+    color: rgb(8, 94, 0);
+    text-align: center;
+}
+
+.header h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+}
+
+form.create-note {
+    position: relative;
+    margin: 30px auto 100px auto;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    padding: 15px;
+    background-color: white;
+}
+
+form.create-note input {
+    width: 92%;
+    border: none;
+    outline: none;
+    resize: none;
+    word-wrap: break-word;
+    color: rgb(83, 83, 83);
+    font-size: 1.5rem;
+}
+
+form.create-note button {
+    position: absolute;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    right: 20px;
+    bottom: 14px;
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    color: white;
+    background-color: rgb(20, 199, 94);
+    transition: 0.1s;
+}
+
+.item {
+    width: 45%;
+    margin: 5px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    padding: 15px;
+    background-color: white;
+    color: rgb(83, 83, 83);
+}
+
+.item p {
+    font-size: 1.2rem;
+    margin: 0;
+    width: 95%;
+}
