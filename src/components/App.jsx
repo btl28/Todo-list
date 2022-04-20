@@ -10,6 +10,16 @@ function App(){
         setListItems([...listItems, newNote]);
     }
 
+    function deleteListItem(id) {
+        setListItems(prevItems => {
+            return (
+                listItems.filter((item, index) => {
+                    return index !== id;
+                })
+            );
+        });
+    }
+
     return (
         <div>
 
@@ -17,7 +27,7 @@ function App(){
             <InputArea addItem={addListItem}/>
             {listItems.map((item, index) => {
                 return (
-                    <TodoItem key={index} note={item} />
+                    <TodoItem key={index} note={item} id={index} onDelete={deleteListItem} />
                 );
             })}
 
