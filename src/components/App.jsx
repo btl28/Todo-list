@@ -7,7 +7,8 @@ function App(){
     const [listItems, setListItems] = useState([]);
 
     function addListItem(newNote) {
-        setListItems([...listItems, newNote]);
+        const newItem = [...listItems, newNote]
+        setListItems(newItem);
     }
 
     function deleteListItem(id) {
@@ -27,7 +28,7 @@ function App(){
             <InputArea addItem={addListItem}/>
             {listItems.map((item, index) => {
                 return (
-                    <TodoItem key={index} note={item} id={index} onDelete={deleteListItem} />
+                    <TodoItem key={index} note={item.note} id={index} onDelete={deleteListItem} />
                 );
             })}
 

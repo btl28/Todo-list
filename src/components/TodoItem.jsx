@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import DeleteIcon from '@mui/icons-material/Delete';
 
 function TodoItem(props) {
     const [isDone, setIsDone] = useState(false);
@@ -8,17 +7,18 @@ function TodoItem(props) {
         props.onDelete(props.id);
     }
 
-    function handleClick() {
+    function handleComplete() {
         setIsDone(!isDone);
     }
 
-    var style = { backgroundColor: "#8f8f8f", color: "white", textDecoration: "line-through"};
-
     return (
 
-        <div onClick={handleClick} style={isDone ? style : null} className="item">
-            <p>{props.note}</p>
-            <button style={isDone ? style : null} onClick={handleDelete}><DeleteIcon /></button>
+        <div className="item">
+            <div className={isDone ? "done" : "not-done"}>
+                <p>{props.note}</p>
+                <button onClick={handleComplete} style={isDone ? { backgroundColor: "grey", color: "white" } : { backgroundColor: "white", color: "rgb(20, 199, 94)" }}><i class="fa-solid fa-check"></i></button>
+                <button style={isDone ? { backgroundColor: "grey", color: "white" } : { backgroundColor: "white", color: "rgb(121, 121, 121)" }} onClick={handleDelete}><i class="fa-solid fa-trash"></i></button>
+            </div>
         </div>
     );
 }

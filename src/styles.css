@@ -12,7 +12,6 @@ body {
     padding: 20px 50px;
     background-color: rgb(29, 216, 107);
     color: rgb(8, 94, 0);
-    text-align: center;
 }
 
 .header h1 {
@@ -24,54 +23,72 @@ form.create-note {
     position: relative;
     margin: 30px auto 100px auto;
     width: 50%;
-    border-radius: 15px;
-    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
-    padding: 15px;
-    background-color: white;
 }
 
 form.create-note input {
-    width: 98%;
+    width: 100%;
     border: none;
     outline: none;
-    resize: none;
-    word-wrap: break-word;
     color: rgb(83, 83, 83);
     font-size: 1.5rem;
+    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 form.create-note button {
     position: absolute;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    right: -2%;
-    bottom: -30%;
+    height: 80px;
+    bottom: -8px;
     border: none;
-    box-shadow: 0 0 5px 1px rgb(170, 170, 170);
-    color: white;
-    background-color: rgb(20, 199, 94);
+    color: rgb(20, 199, 94);
     transition: 0.1s;
+    background-color: rgb(241, 241, 241);
+    font-size: 4.5rem;
+}
+
+form.create-note i {
+    position: relative;
+    height: 60px;
+    bottom: 15px;
+}
+
+.item-input {
+    display: inline-block;
+    width: 90%;
+}
+
+.submit-btn {
+    display: inline-block;
+    border: none;
+    color: rgb(20, 199, 94);
+    transition: 0.1s;
+    margin-left: 5px;
+    text-align: right;
+    background-color: rgb(241, 241, 241);
 }
 
 form.create-note button:hover {
-    background-color: rgb(23, 146, 74);
+    color: rgb(23, 146, 74);
 }
 
 .item {
-    width: 45%;
+    width: 50%;
     margin: 5px auto;
+}
+
+.item div {
+    width: 90%;
     border-radius: 5px;
     box-shadow: 0 0 5px 1px rgb(170, 170, 170);
-    padding: 15px;
-    background-color: white;
-    color: rgb(83, 83, 83);
+    padding: 15px;   
 }
 
 .item p {
     font-size: 1.2rem;
     margin: 0;
-    width: 90%;
+    width: 100%;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -79,11 +96,78 @@ form.create-note button:hover {
 .item button {
     outline: none;
     border: none;
-    background-color: white;
-    color: rgb(121, 121, 121);
-    margin: 0 0 0 95%;
+    padding: 1px 3px;
 }
 
 .item button:hover {
     color: rgb(90, 90, 90);
+}
+
+.done {
+    background-color: grey;
+    text-decoration: line-through;
+    color: white;
+}
+
+.not-done {
+    background-color: white;
+    color: rgb(83, 83, 83);
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header {
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 10rem;
+    }
+
+    form.create-note {
+        margin: 30px auto 150px auto;
+        width: 98%;
+    }
+
+    form.create-note input {
+        width: 100%;
+        font-size: 5rem;
+    }
+
+    .item {
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .item div {
+        width: 98%;
+        margin: auto;
+    }
+
+    .item p {
+        font-size: 3rem;
+    }
+
+    .submit-btn {
+        position: absolute;
+        transform: rotate(90deg);
+        right: 54%;
+        top: 120%;
+    }
+
+    form.create-note button {
+        height: 120px;
+        width: 80px;
+        font-size: 7rem;
+    }
+
+    form.create-note i {
+        height: 110px;
+        bottom: 20px;
+    }
+
+    .item-input {
+        display: block;
+        width: 100%;
+    }
 }
