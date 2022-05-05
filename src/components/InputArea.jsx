@@ -23,7 +23,7 @@ function InputArea(props){
                     <input onChange={handleChange} value={note.note} placeholder="Add an item" />
                 </div>
                 <div className="submit-btn">
-                    <button onClick={handleSubmit} ><i class="fa-solid fa-angle-right"></i></button>
+                    <button onClick={handleSubmit} name="submit-btn" ><i className="fa-solid fa-angle-right"></i></button>
                 </div>
                 
             </form>
