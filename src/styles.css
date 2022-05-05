@@ -28,6 +28,10 @@ body {
 
 /* Form */
 
+.row {
+    margin: 0;
+}
+
 form.create-note {
     position: relative;
     margin: 30px 20% 100px 20%;
@@ -145,6 +149,10 @@ form.create-note button:active {
         font-size: 1.7rem;
     }
 
+    .item-input {
+        width: 100%;
+    }
+
     form.create-note i {
         height: 40px;
         bottom: 11px;
@@ -159,7 +167,7 @@ form.create-note button:active {
     .submit-btn {
         margin: 10px auto 10px auto;
         transform: rotate(90deg);
-    }
+    }  
 
     /* Note */
 
