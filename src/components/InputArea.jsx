@@ -19,12 +19,14 @@ function InputArea(props){
 
             <form className="create-note">
 
-                <div className="item-input">
-                    <input onChange={handleChange} value={note.note} placeholder="Add an item" />
-                </div>
-                <div className="submit-btn">
-                    <button onClick={handleSubmit} name="submit-btn" ><i className="fa-solid fa-angle-right"></i></button>
-                </div>
+                <div className="row">
+                    <div className="item-input col-md-11">
+                        <input onChange={handleChange} value={note.note} placeholder="Add an item" />
+                    </div>
+                    <div className="submit-btn col-md-1">
+                        <button onClick={handleSubmit} name="submit-btn" ><i className="fa-solid fa-angle-right"></i></button>
+                    </div>
+                </div>   
                 
             </form>
 
